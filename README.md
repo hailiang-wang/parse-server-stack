@@ -4,6 +4,7 @@ https://parseplatform.github.io/
 
 ## Server
 ```
+git clone https://github.com/Samurais/parse-server-stack.git && cd parse-server-stack
 npm install
 cp config/environment/development.sample.js config/environment/development.js
 npm start
