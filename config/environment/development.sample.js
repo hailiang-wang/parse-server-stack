@@ -7,10 +7,26 @@ module.exports = {
     masterKey: 'XXX',
     appId: 'datacollection'
   },
-  dashboard: [{
-    serverURL: 'http://localhost:1339/parse',
-    appName: 'local:datacollection',
-    appId: 'datacollection',
-    masterKey: 'XXX'
-  }]
+  dashboard: {
+    'apps': [
+      {
+        'serverURL': 'http://localhost:1339/parse',
+        'appName': 'local:datacollection',
+        'appId': 'datacollection',
+        'masterKey': 'XXX'
+      }
+    ],
+    'users': [
+      {
+        'user': 'admin',
+        'pass': 'foo',
+        'apps': [
+          {
+            'appId': 'datacollection'
+          }
+        ]
+      }
+    ],
+    'PARSE_DASHBOARD_ALLOW_INSECURE_HTTP': true
+  }
 }

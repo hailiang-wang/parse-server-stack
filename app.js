@@ -1,6 +1,6 @@
 const express = require('express')
 const ParseServer = require('parse-server').ParseServer
-const ParseDashboard = require('parse-dashboard');
+const ParseDashboard = require('parse-dashboard')
 const path = require('path')
 const config = require('./config/environment')
 
@@ -18,9 +18,7 @@ const api = new ParseServer({
   logLevel: config.app.logLevel
 })
 
-var dashboard = new ParseDashboard({
-  apps: config.dashboard
-}, config.PARSE_DASHBOARD_ALLOW_INSECURE_HTTP)
+var dashboard = new ParseDashboard(config.dashboard, config.dashboard.PARSE_DASHBOARD_ALLOW_INSECURE_HTTP)
 
 // Client-keys like the javascript key or the .NET key are not necessary with parse-server
 // If you wish you require them, you can set them as options in the initialization above:
